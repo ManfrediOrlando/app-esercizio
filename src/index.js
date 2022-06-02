@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom";
-import { App } from "./App";
+import { Age } from "./Age";
 
 
 const root = document.querySelector("#root")
-ReactDOM.render(<App/>, root)
+ReactDOM.render(<Age/>, root)
 
