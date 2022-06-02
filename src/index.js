@@ -3,5 +3,5 @@ import { Age } from "./Age";
 
 
 const root = document.querySelector("#root")
-ReactDOM.render(<Age/>, root)
+ReactDOM.render(<Age age = {14}/>, root)
 
