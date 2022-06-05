@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom";
-import { Clickcounter } from "./Clickcounter";
+import { Clicktracker } from "./Clicktracker";
 
 const root = document.querySelector("#root")
-ReactDOM.render(<Clickcounter />, root)
+ReactDOM.render(<Clicktracker />, root)
 
