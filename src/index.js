@@ -1,8 +1,8 @@
 import {createRoot} from "react-dom/client";
-import { InteractiveWelcome } from "./InteractiveWelcome";
+import { Login } from "./Login";
 const container = document.getElementById("root")
 const root = createRoot(container)
 root.render(<div>
-               <InteractiveWelcome />
+               <Login />
             </div>)
 
