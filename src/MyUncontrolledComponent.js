@@ -31,7 +31,7 @@ export class MyUncontrolledComponent extends React.Component {
                 <h1>My Uncontrolled form</h1>
 
                 <form ref={this._formRef} onSubmit={this.handleFormSubmit}>
-                    <input name="username"/>
+                    <input name="username" autoFocus/>
                     <input name="password" type="password"/>
                     <input name="remember" type="checkbox"/>
 
