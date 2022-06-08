@@ -5,6 +5,7 @@ export class Login extends React.Component {
         username: "",
         password: "",
         remember: "",
+        disabled: "disabled",
     }
     handleImputChange = (event) => {
         const name = event.target.name
@@ -15,6 +16,14 @@ export class Login extends React.Component {
         this.setState({
             [name]: type === "checkbox" ? checked : value,
         })
+
+        this.setState({
+            disabled: this.state.username === "" && this.state.password === ""  ? "disabled" : ""
+        })
+    }
+
+    onLogin = () =>{
+        console.log(this.state) 
     }
 
     render() {
@@ -26,6 +35,7 @@ export class Login extends React.Component {
                 <input placeholder= "username" name="username" value= {this.state.username} onChange={this.handleImputChange}/>
                 <input placeholder= "password" name="password" type="password" value={this.state.password} onChange={this.handleImputChange}/>
                 <input placeholder= "remember" name="remember" type="checkbox" checked={this.state.remember} onChange={this.handleImputChange} />
+                <button disabled={this.state.disabled} onClick={this.onLogin}>Login</button>
                 </div>
 
 
