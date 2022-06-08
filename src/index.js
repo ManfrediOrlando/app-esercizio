@@ -1,8 +1,8 @@
 import {createRoot} from "react-dom/client";
-import { Login } from "./Login";
+import { MyUncontrolledComponent } from "./MyUncontrolledComponent";
 const container = document.getElementById("root")
 const root = createRoot(container)
 root.render(<div>
-               <Login />
+               <MyUncontrolledComponent />
             </div>)
 
