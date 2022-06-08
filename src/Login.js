@@ -24,12 +24,26 @@ export class Login extends React.Component {
 
     onLogin = () =>{
         console.log(this.state) 
+
+        
+    }
+
+    handleResetState = () => {
+        this.setState({
+            username: "",
+            password: "",
+            remember: false,
+        })
     }
 
     render() {
         return (
             <div>
                 <h1>My form</h1>
+
+                <div>
+                    <button onClick={this.handleResetState}>Reset</button>
+                </div>
                 
                 <div>
                 <input placeholder= "username" name="username" value= {this.state.username} onChange={this.handleImputChange}/>
