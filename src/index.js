@@ -1,7 +1,7 @@
 import {createRoot} from "react-dom/client";
-import { Welcome } from "./Welcome";
 import "./index.css"
+import { Login } from "./Login";
 const container = document.getElementById("root")
 const root = createRoot(container)
-root.render(<Welcome name="Manfredi" />)
+root.render(<Login />)
 
