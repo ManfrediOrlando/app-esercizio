@@ -13,7 +13,7 @@ export class TodoList extends React.Component {
 
     handleAdd = (event) =>{
         this.setState({
-            add: event.target.value  
+            add: event.target.value, 
         })
     }
 
@@ -24,7 +24,9 @@ export class TodoList extends React.Component {
     }
 
     ResetArray = (event) =>{
-        this.setState({items: []})
+        this.setState({
+            items: [],
+        })
     }
 
     render() {
