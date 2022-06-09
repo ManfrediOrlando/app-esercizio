@@ -17,6 +17,12 @@ export class TodoList extends React.Component {
         })
     }
 
+    reset = (event) =>{
+        this.setState({
+            add: " ",
+        })
+    }
+
     render() {
         return(
             <div>
@@ -26,7 +32,7 @@ export class TodoList extends React.Component {
                      <li key={item + index}>{item}</li>)}
 
                      <input value={this.state.add} type="text" onChange={this.handleAdd} />
-                     <button type="submit" onClick={this.pushItem}>send</button>
+                     <button onClick={() => { this.pushItem(); this.reset();}}>send</button>
                  </ul>
             </div>
         )
