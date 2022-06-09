@@ -29,13 +29,21 @@ export class TodoList extends React.Component {
         })
     }
 
+    deleteItem = (event) =>{
+        let toDelete = event.target.previousSibling.textContent
+
+        this.setState({
+            items: this.state.items.filter(item => item !== toDelete),
+        })
+   }
+  
     render() {
         return(
             <div>
                  <ul>
                      {this.state.items.map((item, index) => 
 
-                     <li key={item + index}>{item}</li>)}
+                     <span><li key={item + index}>{item}</li><button onClick={this.deleteItem}>Delete</button></span>)}
 
                      <input value={this.state.add} type="text" onChange={this.handleAdd} />
                      <button onClick={() => { this.pushItem(); this.reset();}}>send</button>
