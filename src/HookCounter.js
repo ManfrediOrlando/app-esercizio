@@ -1,15 +1,22 @@
 import { useEffect, useState } from "react"
 
-export function HookCounter({initialValue}){
+export function HookCounter({initialValue = 0}){
     const [counter, setCounter] = useState(initialValue)
 
-    // useEffect(() => {
-    //     console.log(`The counter is now ${counter}`)
-    // }, [counter])
 
     useEffect(function onCounterChange() {
         console.log(`The counter is now ${counter}`)
     }, [counter])
+
+    useEffect(() => {
+        console.log(`I have mounted`)
+
+        return() => {
+            console.log(`I am about to be unmounted`)
+        }
+    },[])
+
+    // da capire questa cosa perche non ne sono sicuro
 
     function handleCounterIncrement(){
         setCounter(c => c + 1)
