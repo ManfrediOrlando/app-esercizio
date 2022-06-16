@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useMemo } from "react";
+import { FilteredList } from "./FilteredList";
 
 
-export class App extends React.Component{
-    render(){
+export function App(){ 
+
         return(
                 <div>
-                    
+                    <FilteredList/>
                 </div>
         )
-    }
 }
+
