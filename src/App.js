@@ -1,14 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { GithubUser } from "./GithubUser";
 
 
-export class App extends React.Component{
-    
-    render(){
+export function App() {
+    const [username, setUsername] = useState("")
         return(
-                <div>                    
-                    <GithubUser username={"manfrediorlando"}/>
+                <div>
+                    <input value={username} onChange={(e) => setUsername(e.target.value)}></input>                    
+                    <GithubUser username={username}/>
                 </div>
         )
-    }
 }
