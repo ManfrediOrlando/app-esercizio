@@ -1,4 +1,5 @@
 import React from "react"
+import {Link} from "react-router-dom";
 export class Counter extends React.Component {
     state = { count: this.props.initialValue, }
    
@@ -14,6 +15,7 @@ export class Counter extends React.Component {
             <div>
                <h1>Count: {this.state.count}</h1>
                <button onClick={this.handleCounterIncrement}>Increment</button>
+               <Link to="/">Back</Link>
             </div>
         ) 
     }

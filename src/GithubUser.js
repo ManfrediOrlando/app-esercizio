@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import {Link} from "react-router-dom";
 
 export function GithubUser({username}) {
     const [data, setData] = useState("")
@@ -13,6 +14,7 @@ export function GithubUser({username}) {
         {data && <h1>The name is: {data.name}</h1>}
         {data && <h1>number of repository: {data.public_repos}</h1>}
         {data && <h1>He has {data.followers} followers</h1>}
+        <Link to="/">Back</Link>
 
             </div>
 }
