@@ -15,8 +15,8 @@ export function App(){
                         <Route path="/:name" element={<Welcome/>}/>
                         <Route path="/login" element={<LoginForm/>}/>
                         <Route path="/counter" element={<Counter/>}/>
-
                         <Route path='/users/:username' element={<ShowGithubUser/>}/>
+                        <Route path="*" element={<h1>Not Found</h1>}></Route>
 
                     </Routes>
                 </div>
