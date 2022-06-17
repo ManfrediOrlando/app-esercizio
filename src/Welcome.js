@@ -1,13 +1,12 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 
-export function Welcome({name}){
+export function Welcome(){
+    const {name = "World"} = useParams()
     return(
         <div>
-            {name && <h2>Hello, {name}</h2>}
-            {!name && <h2>Hello, World</h2>}
-            <Link to="/login">Login to the App</Link>
-            <Link to="/counter">Go to the Counter</Link>
+            <h2>Hello, {name}!</h2>
+            <Link to="/login">Login to the App</Link> | <Link to="/counter">Go to the Counter</Link> | <Link to="/users/:username">Go to User</Link>
         </div>
     )
 
