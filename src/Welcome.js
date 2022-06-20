@@ -6,7 +6,7 @@ export function Welcome(){
     return(
         <div>
             <h2>Hello, {name}!</h2>
-            | <Link to="users">Go to User</Link>  |
+            | <Link to="users">Go to User</Link>  |  <Link to="/users/manfrediorlando">Manfredi Orlando</Link>
         </div>
     )
 
