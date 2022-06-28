@@ -13,10 +13,15 @@ store.subscribe(() => {
 })
 
 
-store.dispatch(counterState.actions.increment(5))
+store.dispatch(counterState.actions.increment(50))
 store.dispatch(counterState.actions.decrement(5))
+store.dispatch(counterState.actions.reset())
 store.dispatch(usersState.actions.add({id: 1, name: "tomato", completed: true}))
 store.dispatch(usersState.actions.edit({ id: 1, data: {completed: false} }))
+store.dispatch(usersState.actions.clear())
+
+
+
 
 
 
